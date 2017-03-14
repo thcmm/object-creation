@@ -20,6 +20,10 @@ Logging "moreLanguages" should print:
   }
 
 */
+let temp = {
+    isolates: ["Korean", "Basque"],
+    Germanic: ["Swedish", "Danish", "English"]
+  }
 
 let languages = {
   Celtic: ["Welsh", "Irish", "Breton"],
@@ -28,8 +32,8 @@ let languages = {
 
 //Write task #1 code below
 
-
-
+let morelanguages = Object.assign(languages, temp);
+console.log(morelanguages);
 
 /*
 Task #2
@@ -58,6 +62,8 @@ function Husky() {
 
 // TODO: Use Object.create() in order to extend the superclass with the subclass
 //write code here
+
+Husky.prototype = Object.create(Dog.prototype);
 
 var fido = new Husky();
 
